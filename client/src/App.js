@@ -1,5 +1,6 @@
-import { Route } from 'react-router-dom'
+import { Route, Routes } from 'react-router-dom'
 import Departments from './components/Departments'
+import Products from './components/Products'
 import './styles/App.css'
 
 const App = () => {
@@ -12,7 +13,9 @@ const App = () => {
           <Departments />
         </div>
         <div className="right">
-          <Route path="/departments/:id" component={() => <div></div>} />
+          <Routes>
+            <Route path="/departments/:id" component={<Products />} />
+          </Routes>
         </div>
       </div>
     </div>
